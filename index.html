@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Livro de receitas da família</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Livro de receitas</h1>
+    <p class="sub">As receitas lá de casa, todas no mesmo sítio.</p>
+    <button id="btn-nova" class="btn principal" type="button">Adicionar receita</button>
+  </header>
+
+  <main>
+    <section class="ferramentas" aria-label="Pesquisa e filtros">
+      <label class="pesquisa">
+        <span class="so-leitor">Pesquisar receitas</span>
+        <input id="pesquisa" type="search" placeholder="Pesquisar por nome, ingrediente ou descrição">
+      </label>
+      <div id="filtros" class="filtros" role="group" aria-label="Filtrar por tipo"></div>
+    </section>
+
+    <p id="contagem" class="contagem" aria-live="polite"></p>
+    <section id="lista" class="lista"></section>
+    <p id="vazio" class="vazio" hidden></p>
+  </main>
+
+  <dialog id="dialogo">
+    <form id="form" method="dialog">
+      <h2>Nova receita</h2>
+
+      <label>Nome da receita
+        <input name="titulo" required maxlength="120">
+      </label>
+
+      <div class="linha">
+        <label>Tipo
+          <select name="tipo" id="campo-tipo" required></select>
+        </label>
+        <label>Quem a adicionou
+          <input name="autor" maxlength="60" placeholder="Ex.: Mãe">
+        </label>
+      </div>
+
+      <label>Descrição e modo de preparação
+        <textarea name="descricao" rows="5" required maxlength="5000"></textarea>
+      </label>
+
+      <label>Ingredientes (um por linha)
+        <textarea name="ingredientes" rows="6" required placeholder="2 ovos&#10;200 g de farinha&#10;1 colher de chá de fermento"></textarea>
+      </label>
+
+      <label id="bloco-codigo" hidden>Código da família
+        <input name="codigo" type="password" autocomplete="off">
+      </label>
+
+      <p id="erro-form" class="erro" role="alert" hidden></p>
+
+      <div class="acoes">
+        <button type="button" id="btn-cancelar" class="btn">Cancelar</button>
+        <button type="submit" class="btn principal">Guardar receita</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
