@@ -19,12 +19,12 @@ import {
 
 // Substitui com o config do teu novo projeto do Firebase
 const firebaseConfig = {
-  apiKey: "A-TUA-API-KEY",
-  authDomain: "livro-receitas-familia.firebaseapp.com",
-  projectId: "livro-receitas-familia",
-  storageBucket: "livro-receitas-familia.firebasestorage.app",
-  messagingSenderId: "...",
-  appId: "..."
+  apiKey: "AIzaSyCPuIdhm0oOHMBfxuvTQQ0Li1Z_ssxcHFQ",
+  authDomain: "livro-de-receitas-61b3f.firebaseapp.com",
+  projectId: "livro-de-receitas-61b3f",
+  storageBucket: "livro-de-receitas-61b3f.firebasestorage.app",
+  messagingSenderId: "854775704616",
+  appId: "1:854775704616:web:c12ebf19000e478994191d"
 };
 
 const app = initializeApp(firebaseConfig);
